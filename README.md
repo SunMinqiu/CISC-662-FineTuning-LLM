@@ -3,7 +3,7 @@
 
 
 # Usage
-All the '.ipynb' files are usable, runing them step by step and we get our result. While in some HPC systems like DELTA, extra efforts should be made to make sure the programs run properly, like reinstalling or degrading libraries e.g. Numpy, Torch,...
+All the `.ipynb` files are usable, runing them step by step and we get our result. While in some HPC systems like DELTA, extra efforts should be made to make sure the programs run properly, like reinstalling or degrading libraries e.g. Numpy, Torch,...
 
 
 
