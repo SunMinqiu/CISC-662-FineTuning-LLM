@@ -131,6 +131,3 @@ trainer.train()
 print("After:")
 print(generate_response("""How to learn Computer Architecture Well?""", model))
 print(generate_response("""如何学好计算机体系结构？""", model))
-      
-#Save if u need
-# trainer.save_model("Interleave_ckpt100&200")
