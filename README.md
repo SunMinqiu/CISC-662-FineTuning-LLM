@@ -148,6 +148,36 @@ systems. …(repeat)
 #### Results after finetuning
 In the first chapter of this book, we will review the basic concepts of computer system and the main components of a computer system. We will also discuss the various types of computer systems and the main components of a computer system. In addition, we will discuss the various types of computer systems and the main components of a computer system. …(repeat)
 
+# GPU Analysis
+
+## GPU SM Clock Speed
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-Clock%20Speed.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Clock%20Speed.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-Clock%20Speed.png)
+
+## GPU Utilization
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-GPU%20Util.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Utilization%20.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-GPU%20Util.png)
+
+# GPU Power Usage
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-Power.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Power%20Usage.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-Power%20Usage.png)
+
+
+# GPU Memory Allocated
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-Mem.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Memory%20Allocated.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-GPU%20Mem.png)
+
+
+# Evaluation loss / Training loss
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-loss.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Loss.png)
+![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-loss.png)
+
+
 
 
 
