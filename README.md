@@ -13,6 +13,8 @@ Finetuning Large Language Models(LLMs) is important to them as this process help
 * LLaMA series
 * Qwen series
 
+  For all of them we use LoRA as a Parameter Efficient Fine Tuning method, and use SFTtrainer to do the fine tuning.
+
  ## HPC platforms info: 
 * Delta
   
@@ -155,15 +157,33 @@ In the first chapter of this book, we will review the basic concepts of computer
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Clock%20Speed.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-Clock%20Speed.png)
 
+Analysis: Mistral and Llama series on A100 are higher than them on H100. It shows that higher stability compared to their performance on the other GPUs.
+
+
 ## GPU Utilization
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-GPU%20Util.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Utilization%20.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-GPU%20Util.png)
 
+Analysis: 
+
+Models on H100 tends to show ideal GPU usage, which means GPUs are making full use of resources. But models on A100 tends to show severe inefficiencies, with high idle times and resource underutilization. Maybe it is because of I/O like checkpointing, which is optimized in higher torch version.
+
+
 # GPU Power Usage
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-Power.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Power%20Usage.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-Power%20Usage.png)
+
+Analysis: 
+
+Mistral on H100: Stable resource consumption throughout runtime, suggesting an optimized workload. 
+
+Mistral on A100: Frequent drops to lower power levels indicate underutilization of GPU.
+
+Llama, Qwen: Consistent GPU workload with no or one significant drop indicating a potential bottleneck. 
+
+All of these seems to utilize 100% percent of the GPU power when they run.
 
 
 # GPU Memory Allocated
@@ -171,13 +191,24 @@ In the first chapter of this book, we will review the basic concepts of computer
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Memory%20Allocated.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-GPU%20Mem.png)
 
+Analysis:
+
+Mistral: Mistral on H100 uses less memory compared to Mistral on A100. That seems fair as H100 has limited both GPU memory and GPU SM Clock Speed in this Mistral program. Maybe it can be optimized later.
+
+Llama on A100: Shows an imbalance in memory allocation, suggesting uneven workload distribution.
+
+LLaMA on H100: Demonstrates more consistent memory usage, with better workload balancing.
+
+Qwen: Maintains a stable memory allocation. 
 
 # Evaluation loss / Training loss
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Mis-loss.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Loss.png)
 ![image](https://github.com/SunMinqiu/CISC-662-FineTuning-LLM/blob/main/img/Llama-loss.png)
 
+Analysis:
 
+In LLM the SFTtrainer in transformer library uses Cross-Entropy Loss as a loss function. Mistral models achieve better final loss values (~1.9) compared to Llama and Qwen, indicating better performance. Overall, it is good that we did not overfit. But we need to make futher research on why the text generation is so poor.
 
 
 
