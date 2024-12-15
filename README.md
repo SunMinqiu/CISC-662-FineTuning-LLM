@@ -7,3 +7,5 @@ I think if we do this experiment again, we will record all changes in different 
 
 # Reference list
 https://rocm.docs.amd.com/en/latest/how-to/llm-fine-tuning-optimization/model-quantization.html
+
+20241215
