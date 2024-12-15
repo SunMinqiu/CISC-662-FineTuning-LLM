@@ -187,7 +187,7 @@ In the first chapter of this book, we will review the basic concepts of computer
 
 A100 vs H100
 
-Expected performance: H100 9x better than A100
+Expected performance: H100 2x better than A100
 
 Result run time: about 1.3x better
 
@@ -198,7 +198,7 @@ https://huggingface.co/datasets/mosaicml/instruct-v3
 https://docs.mosaicml.com/projects/mcli/en/latest/finetuning/finetuning.html
 https://arxiv.org/html/2408.04693v1
 https://docs.nvidia.com/nsight-compute/2023.1.1/pdf/NsightComputeCli.pdf
-https://www.cudocompute.com/blog/comparative-analysis-of-nvidia-a100-vs-h100-gpus
+https://gcore.com/blog/nvidia-h100-a100/
 
 
 
